@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/Tv_Title"
+        android:text="验证密保" />
+
+    <Spinner
+        android:id="@+id/Sp_mibao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/mibaowenti"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Btn_Mb_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@null"
+        android:text="验证"
+        android:textColor="#0073E6"
+        android:textSize="40dp" />
+
+</LinearLayout>

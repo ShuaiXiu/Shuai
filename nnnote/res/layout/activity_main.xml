@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zjm"
+    tools:context=".Activity_Main" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Tv_Title"
+        android:text="笔记" />
+
+    <RelativeLayout
+        android:id="@+id/ral1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title" >
+
+        <ImageButton
+            android:id="@+id/Btn_menu_show"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:onClick="hanbao"
+            android:src="@drawable/icon_pic_list_type" />
+
+        <ImageButton
+            android:id="@+id/btn_write_note"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/edit_query" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ral1" >
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="#2200ff00"
+            android:dividerHeight="1dp" />
+
+        <GridView
+            android:id="@+id/Gird_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#2200ff00"
+            android:gravity="center_horizontal"
+            android:numColumns="2"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

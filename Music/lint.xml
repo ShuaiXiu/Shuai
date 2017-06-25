@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ContentDescription">
+        <ignore path="res\layout\activity_lin.xml" />
+        <ignore path="res\layout\activity_main.xml" />
+        <ignore path="res\layout\music_item.xml" />
+        <ignore path="res\layout\notification_view.xml" />
+    </issue>
+    <issue id="HardcodedText">
+        <ignore path="res\layout\activity_lin.xml" />
+        <ignore path="res\layout\activity_main.xml" />
+        <ignore path="res\layout\builder_item.xml" />
+        <ignore path="res\layout\findlist_item.xml" />
+        <ignore path="res\layout\notification_view.xml" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="res\layout\activity_main.xml" />
+    </issue>
+    <issue id="OldTargetApi">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+    <issue id="SelectableText">
+        <ignore path="res\layout\activity_lin.xml" />
+    </issue>
+</lint>

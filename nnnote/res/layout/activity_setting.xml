@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/Tv_Title"
+        android:text="设置" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_mSeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="密保尚未设置"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/Img_Setting_mibao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ku" />
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/Setting_UpdatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:padding="2dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+    
+    <Button 
+        android:id="@+id/Setting_Logon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:text="退出登陆" />
+		
+    
+</LinearLayout>
