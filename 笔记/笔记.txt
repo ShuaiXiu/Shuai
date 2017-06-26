@@ -1,0 +1,156 @@
+{i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+context.startActivity(i)}:将你的程序运行在任务栈中 可通过广播启动
+
+byte 8位 boolean 8位 short 16位 char 16位 int 32位 float 32位  long 64位 double 64位
+
+setAction():设置需要发射的广播
+
+开发软件可以投放广告获取利润：有米 万普 自带API SDK
+
+https://developers.google.cn/  ：android官网
+
+android.intent.action.BOOT_COMPLETED：开机自启动权限
+
+priority:设置广播的优先级
+
+abortBroadcast():拦截有序广播
+
+sebdIrderedBroadcast(intent,null,*(一定要接收到广播的接收者new出来的对象)*,null,0,null,null):即使广播被优先级高的接收者拦截，那么这个广播接收者也能收到广播
+
+{
+<include layout="@layout/自己布局的名字">
+主方法中 requestWindowFeature(Window.FEATURE_NO_TITLE);屏蔽自带标题栏
+} 自己写标题栏
+
+Intent.ACTION_GET_CONTENT
+action_get_content是通过intent中设置的type属性来判断具体调用哪个程序的。
+Intent?intent?=?new?Intent(Intent.ACTION_GET_CONTENT); 
+intent.setType("audio/*"); 
+
+getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)使系统屏幕不会进入休眠状态
+
+final:使用此关键词修饰的参数过方法不会被修改
+{
+LayoutInflater?inflater?=?localLayout.getLayoutInflater();//先获取当前布局的填充器??
+View findViewById?=?inflater.inflate(R.layout.remoteLayout,?null);//通过填充器获取另外一个布局的对象??
+widget=(WidgetClass)findViewById.findViewById(R.id.widgetID);//通过另外一个布局对象的findViewById获取其中的控件
+}：获得其他布局控件的方法 但是要放到（AlertDialog）所在的方法中
+
+ipconfig 查看本机IP地址
+
+android:digits //设置只接受某些数字
+
+setCancelable(false)设置弹出对话框不可被back关闭
+
+CountDownTimer cdt=new CountDownTimer((X秒后执行,Y秒内每隔多长时间执行一次){onTick(X秒内每隔多长时间执行一次)
+ onFinish(Y秒后执行的方法));
+
+cat cmd查看Shared_prefs下的xml文件
+
+WINDOW_SERVICE WindowManager 管理打开的窗口程序
+
+LAYOUT_INFLATER_SERVICE LayoutInflater 取得xml里定义的view
+
+ACTIVITY_SERVICE ActivityManager 管理应用程序的系统状态
+
+POWER_SERVICE PowerManger 电源的服务
+
+ALARM_SERVICE AlarmManager 闹钟的服务
+
+NOTIFICATION_SERVICE NotificationManager 状态栏的服务
+
+KEYGUARD_SERVICE KeyguardManager 键盘锁的服务
+
+LOCATION_SERVICE LocationManager 位置的服务，如GPS
+
+SEARCH_SERVICE SearchManager 搜索的服务
+
+VEBRATOR_SERVICE Vebrator 手机震动的服务
+
+CONNECTIVITY_SERVICE Connectivity 网络连接的服务
+
+WIFI_SERVICE WifiManagerWi-Fi 服务
+
+TELEPHONY_SERVICE TeleponyManager 电话服务
+
+带图片的Toast{
+toast = Toast.makeText(getApplicationContext(), "带图片的Toast", Toast.LENGTH_LONG);
+toast.setGravity(Gravity.CENTER, 0, 0);
+LinearLayout toastView = (LinearLayout) toast.getView();
+ImageView imageCodeProject = new ImageView(getApplicationContext());
+imageCodeProject.setImageResource(R.drawable.icon);
+toastView.addView(imageCodeProject, 0);
+toast.show();}
+
+
+ObjectAnimator : 属性语句
+alpha : 透明
+rotation : 旋转
+translationX/Y :XY轴移动
+scaleX/Y :X/Y轴 垂直方向上进行缩放
+
+AnimatorSet :组合动画
+after(Animator anim)   将现有动画插入到传入的动画之后执行
+after(long delay)   将现有动画延迟指定毫秒后执行
+before(Animator anim)   将现有动画插入到传入的动画之前执行
+with(Animator anim)   将现有动画和传入的动画同时执行
+
+Animator.addListener :给动画添加监听
+onAnimationStart()方法会在动画开始的时候调用
+onAnimationRepeat()方法会在动画重复执行的时候调用
+onAnimationEnd()方法会在动画结束的时候调用
+onAnimationCancel()方法会在动画被取消的时候调用
+
+
+设置时间格式 : yyyy-MM-dd HH:mm:ss
+
+打开文件的开头几个字节：
+EF BB BF　　　 UTF-8
+FE FF　　　　　UTF-16/UCS-2, little endian
+FF FE　　　　　UTF-16/UCS-2, big endian
+FF FE 00 00　　UTF-32/UCS-4, little endian.
+00 00 FE FF　　UTF-32/UCS-4, big-endian.
+
+string.concat()为String追加字符 类似于  +
+
+一个程序创建线程的合理个数取决于CPU  ：  CPU核数*2+1
+
+URI:统一资源标识符(相对的)
+URL:统一资源的定位符(绝对的，物理路径)
+URN:统一资源命名
+
+HTTP:
+长链接:不管有没有数据发送链接一直存在
+短链接:传输数据过后立即关闭
+
+将服务设置为系统服务:在Manifest.xml文件中设置persistent属性为true
+
+OOM:对于一个对象来说，只要有引用的存在，它就会一直存在于内存中。
+如果这样的对象越来越多，超出了JVM中的内存总数，JVM就会抛出OutOfMemory错误
+
+软引用:可以通过java.lang.ref.SoftReference使用软引用 不会很快被JVM回收
+弱引用:java.lang.ref.WeakReference
+引用简介:
+强引用:从来不会被回收，JVM宁愿抛出OOM也不会回收它
+软引用:当内存不足时会被回收，用途是对象缓存,内存不足时终止
+弱引用:当垃圾回收时只要被发现就会被回收,作用是对象缓存，GC(垃圾处理机制)运行后
+虚引用:跟踪GC
+
+各大平台的换行符：
+Mac平台：\r
+Unix或Linux：\n
+Windows或Http：\r\n
+Unicode标准:\u2028
+
+当&作为位运算时，1&1=1 ，1&0=0，0&0=0
+
+android:windowSoftInputMode="adjustPan" Android键盘不挤压布局
+
+moveTaskToBack(boolean nonRoot)：当nonRoot为false时，只有当前Activity为根Activity时有效。
+当为true的时候忽略限制，所有状态都有效。
+
+腾讯接入
+APP ID1106169807
+APP KEYxjy1fc54ZgTbAbqC
+
+http://www.open-open.com/lib/view/open1451484856698.html//QQ登陆网址

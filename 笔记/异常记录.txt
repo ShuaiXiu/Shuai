@@ -1,0 +1,2 @@
+ConcurrentModificationException：如果在迭代过程中对数组长度进行改变就会报此错误。
+NullPointException：对空对象的引用。

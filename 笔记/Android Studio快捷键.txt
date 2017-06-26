@@ -1,0 +1,6 @@
+SmartType:智能补全。
+ctrl+shift+↑或者↓是移动选中这行。
+不区分大小写:Editor.General.Code Completion.Case sensitive completion:None。
+ctrl+enter:自动改错，自动补前缀。
+ctrl+shift+U:快捷大小写。
+Error:java.util.concurrent.ExecutionException: com.android.ide.common.process.ProcessException:点9图造成d的。
